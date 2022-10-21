@@ -1,0 +1,391 @@
+/*--------------ПІДКЛЮЧЕННЯ ШРИФТІВ-------------------*/
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&display=swap');
+/*---------------------------------------------------*/
+
+body{
+    font-family: 'Lato', sans-serif;
+    color: #424551;
+    background: rgb(54, 54, 54);
+}
+.wrapper {
+    overflow: hidden;
+	position: relative;
+	min-height: 100%;
+}
+.header__container{
+    margin: 0 auto;
+    padding: 60px;
+    max-width: 810px;
+    text-align: center;
+}
+.header__logo {
+margin-bottom: 40px;
+}
+.header__button {
+    position: relative;
+    margin: 0 auto;
+    width: 150px;
+    height: 50px;
+    background: linear-gradient(90deg, rgba(255,0,249,1) 0%, rgba(255,220,16,1) 35%, rgba(42,223,115,1) 100%);
+    color: rgba(234, 0, 255, 0.431);
+    font-size: 20px;
+    font-weight: 900;
+    border: 2px solid #2d2d2d ;
+    border-radius: 10px;
+    box-shadow: 5px 5px 0px #252525;
+    text-align: center;
+    padding: 12px;
+    transition: 0.2s;
+    top: 0px;
+    animation-name: shadow;
+    animation-duration: 0.5s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+.button{
+    width: 150px;
+    height: 50px;
+    background: linear-gradient(90deg, rgba(255,0,249,1) 0%, rgba(255,220,16,1) 35%, rgba(42,223,115,1) 100%);
+    color: rgba(234, 0, 255, 0.431);
+    font-size: 20px;
+    font-weight: 900;
+    border: 2px solid #2d2d2d ;
+    border-radius: 10px;
+    box-shadow: 5px 5px 0px #252525;
+    text-align: center;
+    padding: 12px;
+}
+
+.header__button:hover{
+    top: 2px;
+    box-shadow: 4px 4px 0px #252525;
+    animation-play-state: paused;
+}
+.header__button:active{
+    top: 3px;
+    box-shadow: 2px 2px 0px #252525;
+}
+@keyframes shadow{
+
+    0%{
+        box-shadow: 5px 5px 0px #252525;
+    }
+    100%{
+        box-shadow: 5px 5px 0px #6c6c6c86;
+    }
+}
+.game__container{
+    margin: 0 auto;
+    padding: 20px 110px;
+    max-width: 810px;
+    text-align: center;
+    margin-bottom: 30px;
+}
+.main-block{
+    width: 600px;
+    height: 900px;
+    background: black;
+    outline: 4px solid rgb(255, 255, 255);
+    position: relative;
+}
+.main-block__item {
+    position: absolute;
+    left: 230px;
+    top: 15px;
+    opacity: 0;
+}
+.main-block__item img{
+    width: 150px;
+}
+.item-1__element{
+    animation: tetris-visible 0s forwards, tetris-1 5s cubic-bezier(0.23, 1, 0.32, 1) forwards;
+}
+.item-2__element{
+    animation: tetris-visible 0s forwards 5s , tetris-2-1 2s forwards 5.2s, tetris-2-2 2s cubic-bezier(0.23, 1, 0.32, 1) forwards 7.2s;
+}
+.item-3__element{
+    animation: tetris-visible 0s forwards 9.3s , tetris-3-1 2s forwards 9.6s, tetris-3-2 2s cubic-bezier(0.23, 1, 0.32, 1) forwards 11.6s;
+}
+.item-3__element img{
+    width: 220px;
+}
+.item-4__element{
+    animation: tetris-visible 0s forwards 13.7s , tetris-4-0 0s forwards 13.8s, tetris-4-1 2s forwards 13.9s, tetris-4-2 2s cubic-bezier(0.23, 1, 0.32, 1) forwards 16s;
+}
+.item-4__element {
+    top:25px;
+}
+.item-4__element img{
+    width: 230px;
+}
+.item-5__element{
+    animation: tetris-visible 0s forwards 18.1s, tetris-5-1 2s forwards 18.2s, tetris-5-2 2s cubic-bezier(0.23, 1, 0.32, 1) forwards 20.3s;
+}
+.item-5__element img{
+    width: 225px;
+}
+.item-6__element{
+    animation: tetris-visible 0s forwards 22.4s , tetris-6-1 2s forwards 22.5s, tetris-6-2 2s cubic-bezier(0.23, 1, 0.32, 1) forwards 24.6s;
+}
+.item-7__element img{
+    width: 225px;
+}
+.item-7__element{
+    animation: tetris-visible 0s forwards 26.7s , tetris-7-1 2s forwards 26.8s, tetris-7-2 2s cubic-bezier(0.23, 1, 0.32, 1) forwards 28.9s;
+}
+.item-8__element{
+    animation: tetris-visible 0s forwards 31s , tetris-8-1 2s forwards 31.1s, tetris-8-2 2s cubic-bezier(0.23, 1, 0.32, 1) forwards 33.2s;
+}
+.item-8__element img{
+    width: 225px;
+}
+.item-9__element{
+    animation: tetris-visible 0s forwards 35.3s ,tetris-9-2 2s cubic-bezier(0.23, 1, 0.32, 1) forwards 35.4s;
+}
+
+.item-10__element{
+    animation: tetris-visible 0s forwards 37.6s , tetris-10-2 2s cubic-bezier(0.23, 1, 0.32, 1) forwards 37.7s;
+}
+.item-10__element{
+    left:158px;
+    transform: rotate(-180deg);
+}
+.item-11__element{
+    animation: tetris-visible 0s forwards 40s;
+}
+.item-11__element img{
+    width: 225px;
+}
+.item-11__element{
+    top: -3px;
+}
+.end-game{
+    opacity: 0;
+    top: 250px;
+    left: 150px;
+    position: absolute;
+    z-index: 5;
+    animation:tetris-visible 0.3s forwards 40.3s, endgame 1s alternate 4 40.4s;
+}
+.end-game img{
+    max-width: 300px;
+}
+.main-block__dark-theme{
+    opacity: 0;
+    z-index: 2;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: #25252589;
+    animation:tetris-visible 0.3s forwards 40.2s;
+}
+.start-again{
+    opacity: 0;
+    z-index: 3;
+    position: absolute;
+    top: 620px;
+    left: 230px;
+    animation: tetris-visible 0.4s forwards 44.4s;
+}
+@keyframes tetris-visible{
+
+    0%{
+        opacity:0;
+    }
+    100%{
+        
+        opacity:1;
+    }
+}
+@keyframes tetris-1{
+
+    0%{
+        top: 15px;
+    }
+    100%{
+        
+        top: 750px;
+    }
+}
+@keyframes tetris-2-1{
+
+    0%{
+        left: 230px;
+    }
+    100%{
+        left: 90px;
+    }
+}
+@keyframes tetris-2-2{
+
+    0%{
+        top: 15px;
+    }
+    100%{
+        top: 685px;
+    }
+}
+
+@keyframes tetris-3-1{
+
+    0%{
+        left: 230px;
+    }
+    100%{
+        left: 370px;
+    }
+}
+@keyframes tetris-3-2{
+
+    0%{
+        top: 15px;
+    }
+    100%{
+        top: 755px;
+    }
+}
+@keyframes tetris-4-0{
+
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(90deg);
+    }
+}
+@keyframes tetris-4-1{
+
+    0%{
+        left: 230px;
+    }
+    100%{
+        left: 116px;
+    }
+}
+@keyframes tetris-4-2{
+
+    0%{
+        top: 25px;
+    }
+    100%{
+        top: 647px;
+    }
+}
+@keyframes tetris-5-1{
+
+    0%{
+        left: 230px;
+    }
+    100%{
+        left: 298px;
+    }
+}
+@keyframes tetris-5-2{
+
+    0%{
+        top: 15px;
+    }
+    100%{
+        top: 682px;
+    }
+}
+@keyframes tetris-6-1{
+
+    0%{
+        left: 230px;
+    }
+    100%{
+        left: 90px;
+    }
+}
+@keyframes tetris-6-2{
+
+    0%{
+        top: 15px;
+    }
+    100%{
+        top: 545px;
+    }
+}
+@keyframes tetris-7-1{
+
+    0%{
+        left: 230px;
+    }
+    100%{
+        left: 158px;
+    }
+}
+@keyframes tetris-7-2{
+
+    0%{
+        top: 15px;
+    }
+    100%{
+        top: 472px;
+    }
+}
+@keyframes tetris-8-1{
+
+    0%{
+        left: 230px;
+    }
+    100%{
+        left: 158px;
+    }
+}
+@keyframes tetris-8-2{
+
+    0%{
+        top: 15px;
+    }
+    100%{
+        top: 342px;
+    }
+}
+@keyframes tetris-9-2{
+
+    0%{
+        top: 15px;
+    }
+    100%{
+        top: 129px;
+    }
+}
+@keyframes tetris-10-2{
+
+    0%{
+        top: 15px;
+    }
+    100%{
+        top: 62px;
+    }
+}
+@keyframes tetris-11-0{
+
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+}
+@keyframes endgame{
+
+    0%{
+        transform: scale(1);
+    }
+    100%{
+        transform: scale(1.3);
+    }
+}
+
+.footer{
+    background: #2d2d2d;
+    height: 50px;
+    text-align: center;
+    font-weight: 700;
+    color: #424551;
+    padding: 10px;
+    font-size: 20px;
+}
